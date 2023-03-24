@@ -4,16 +4,7 @@ import { useState } from "react";
 import evolutzAcademyLogo from "../assets/logo/evolutz-academy-logo.png";
 import MobileHeader from "./MobileHeader";
 
-export default function Header() {
-  const [openMobileMenu, setOpenMobileMenu] = useState(false);
-  const clickHandler = () => {
-    setOpenMobileMenu(true);
-  };
-
-  const closeMobileMenu = () => {
-    setOpenMobileMenu(false);
-  };
-
+export default function Header({ handleClick }) {
   return (
     <header className="bg-white/30 backdrop-blur-sm py-[0.25rem] px-5 min-[860px]:px-8">
       <section className="flex justify-between max-w-[1180px] mx-auto">
@@ -56,7 +47,7 @@ export default function Header() {
         </div>
         <div
           className="min-[860px]:hidden flex items-center"
-          onClick={clickHandler}
+          onClick={handleClick}
         >
           <div className="space-y-2 space">
             <div className="w-8 h-0.5 bg-gray-600"></div>
@@ -65,10 +56,6 @@ export default function Header() {
           </div>
         </div>
       </section>
-      <MobileHeader
-        handleClick={closeMobileMenu}
-        openMobileMenu={openMobileMenu}
-      />
     </header>
   );
 }
