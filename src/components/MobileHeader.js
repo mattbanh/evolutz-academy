@@ -15,8 +15,8 @@ export default function Header({ handleClick, openMobileMenu }) {
       <section
         className={
           openMobileMenu
-            ? "flex flex-col gap-9 px-5 pt-[0.25rem] bg-mobile-menu h-full w-2/3 relative animate-slidein"
-            : "flex flex-col gap-9 px-5 pt-[0.25rem] bg-mobile-menu h-full w-2/3 relative -translate-x-full transition duration-300"
+            ? "flex flex-col gap-9 px-5 pt-[0.25rem] bg-mobile-menu h-screen w-2/3 relative animate-slidein"
+            : "flex flex-col gap-9 px-5 pt-[0.25rem] bg-mobile-menu h-screen w-2/3 relative -translate-x-full transition duration-300"
         }
       >
         <div>
