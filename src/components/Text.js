@@ -22,7 +22,7 @@ export function Text({
     list: "font-semibold text-lg",
     statement: "font-bold uppercase text-xs md:text-base",
     bodySub: "text-sm md:text-[0.9375rem]",
-    button: "font-semibold uppercase text-sm md:text-[0.9375rem]",
+    button: "font-semibold uppercase text-sm",
     breadCrumb: "uppercase text-[0.8125rem]",
     label: "font-light uppercase text-sm",
     footer: "font-light uppercase text-xs",
@@ -60,7 +60,7 @@ export function Heading({
   };
   const sizes = {
     // Only on homepage
-    page: "font-bold text-4xl md:text-[3.3125rem] md:leading-[4.0625rem]",
+    page: "font-bold text-4xl md:text-[3.3125rem] leading-[2.75rem] md:leading-[4.0625rem] ",
     sectionXl: "font-semibold uppercase text-[2.5rem] md:text-[4.4375rem]",
     sectionLg: "font-semibold uppercase text-xl md:text-[3.4375rem]",
     // sectionLg: "",
