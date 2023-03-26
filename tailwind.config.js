@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        nunito: ['"Nunito Sans"', "sans-serif"],
+      },
       colors: {
         "mobile-menu": "#EAEAE6",
         "academy-blue": "#14224A",

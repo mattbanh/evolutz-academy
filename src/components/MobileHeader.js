@@ -8,7 +8,7 @@ export default function Header({ handleClick, openMobileMenu }) {
     <section
       className={
         openMobileMenu
-          ? "w-full h-full absolute top-0 left-0 flex bg-black/30 animate-fadein"
+          ? "w-full h-full absolute z-50 top-0 left-0 flex bg-black/30 animate-fadein"
           : "hidden"
       }
     >
