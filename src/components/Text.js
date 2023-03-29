@@ -20,7 +20,8 @@ export function Text({
     body: "text-base leading-6",
     overline: "font-medium uppercase text-[0.9375rem] md:text-[lg]",
     list: "font-semibold text-lg",
-    statement: "font-bold uppercase text-xs md:text-base",
+    statement:
+      "font-semibold uppercase text-xs md:text-[1rem] md:leading-[1.25rem]",
     bodySub: "text-sm md:text-[0.9375rem]",
     button: "font-semibold uppercase text-sm",
     breadCrumb: "uppercase text-[0.8125rem]",
