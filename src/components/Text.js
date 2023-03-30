@@ -23,7 +23,7 @@ export function Text({
     statement:
       "font-semibold uppercase text-xs md:text-[1rem] md:leading-[1.25rem]",
     bodySub: "text-sm md:text-[0.9375rem]",
-    button: "font-semibold uppercase text-sm",
+    button: "font-medium uppercase text-sm",
     breadCrumb: "uppercase text-[0.8125rem]",
     label: "font-light uppercase text-sm",
     footer: "font-light uppercase text-xs",
