@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Text, Heading } from "./Text";
 import HomepageFounder from "../assets/images/homepage-founder.png";
 

@@ -13,13 +13,14 @@ export function Text({
     default: "text-evolutz-black",
     primary: "text-academy-blue",
     accent: "text-academy-gold",
+    accentSub: "text-academy-green",
     bright: "text-white",
   };
 
   const sizes = {
     body: "text-base leading-6",
     overline: "font-medium uppercase text-[0.9375rem] md:text-[lg]",
-    list: "font-semibold text-lg",
+    list: "font-medium text-lg leading-6",
     statement:
       "font-semibold uppercase text-xs md:text-[1rem] md:leading-[1.25rem]",
     bodySub: "text-sm md:text-[0.9375rem]",

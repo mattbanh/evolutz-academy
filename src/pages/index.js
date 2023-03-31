@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Mission from "@/components/Mission";
 import Founder from "@/components/Founder";
+import Differentiator from "@/components/Differentiator";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <About />
       <Mission />
+      <Differentiator />
       <Founder />
     </>
   );
