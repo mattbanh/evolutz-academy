@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Footer from "./Footer";
 import MobileHeader from "./MobileHeader";
 import { useState, useEffect } from "react";
 
@@ -42,6 +43,7 @@ export default function Layout({ children }) {
         openMobileMenu={openMobileMenu}
       />
       <main>{children}</main>
+      <Footer />
     </>
   );
 }
