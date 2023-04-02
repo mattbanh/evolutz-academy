@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import evolutzAcademyLogo from "../assets/logo/evolutz-academy-logo.png";
-import MobileHeader from "./MobileHeader";
 
 export default function Header({ handleClick }) {
   return (
