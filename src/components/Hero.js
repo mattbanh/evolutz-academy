@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="relative -z-10">
       <section
-        className="bg-no-repeat md:bg-cover bg-[position:35%_-45px] md:bg-[position:37%_0px] bg-[url('../assets/images/homepage-hero.png')] 
+        className="bg-no-repeat md:bg-cover bg-[position:35%_-45px] md:bg-[position:37%_0px] bg-[url('/assets/images/homepage-hero.png')] 
         min-h-[683px] md:min-h-[800px] flex items-center mt-[-83px]"
       >
         <div className="w-full">
@@ -25,7 +25,7 @@ export default function Hero() {
                 understand that it is complex and requires strategy and
                 discipline to reach a particular destination.
               </p>
-              <a href="https://evolutzacademy.teachable.com/">
+              <a href="https://evolutzacademy.teachable.com/" target="_blank">
                 <Text as="button" size="button">
                   Start Learning
                 </Text>

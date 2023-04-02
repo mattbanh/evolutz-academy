@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import evolutzAcademyLogo from "../assets/logo/evolutz-academy-logo.png";
+import evolutzAcademyLogo from "/public/assets/logo/evolutz-academy-logo.png";
 
 export default function Header({ handleClick }) {
   return (

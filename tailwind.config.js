@@ -36,6 +36,14 @@ module.exports = {
           "50%": { opacity: "0%", transform: "translatex(0%)" },
           "100%": { opacity: "0%", transform: "translatex(-100%)" },
         },
+        slideright: {
+          "0%": { transform: "translatex(0)" },
+          "100%": { transform: "translatex(288px)" },
+        },
+        slideleft: {
+          "0%": { transform: "translatex(0)" },
+          "100%": { transform: "translatex(-288px)" },
+        },
       },
       animation: {
         slidein: "slidein 0.5s",
@@ -43,6 +51,8 @@ module.exports = {
         slideup: "slideup 1s",
         fadein: "fadein 0.25s",
         menufadeout: "menufadeout 0.5s",
+        slideright: "slideright 0.5s",
+        slideleft: "slideleft 0.5s",
       },
     },
   },
