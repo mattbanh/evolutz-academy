@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         nunito: ['"Nunito Sans"', "sans-serif"],
+        montserrat: ['"Montserrat"', "sans-serif"],
       },
       colors: {
         "mobile-menu": "#EAEAE6",
@@ -22,6 +23,10 @@ module.exports = {
           "0%": { transform: "translatex(0%)" },
           "100%": { transform: "translatex(-100%)" },
         },
+        slideup: {
+          "0%": { transform: "translatey(50%)", opacity: "0%" },
+          "100%": { transform: "translatey(0%)", opacity: "100%" },
+        },
         fadein: {
           "0%": { opacity: "0%" },
           "100%": { opacity: "100%" },
@@ -35,6 +40,7 @@ module.exports = {
       animation: {
         slidein: "slidein 0.5s",
         slideout: "slideout 0.5s",
+        slideup: "slideup 1s",
         fadein: "fadein 0.25s",
         menufadeout: "menufadeout 0.5s",
       },
