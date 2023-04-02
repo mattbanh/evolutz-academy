@@ -5,12 +5,12 @@ import homepageBenefits from "../assets/images/homepage-benefits.png";
 export default function Benefits() {
   return (
     <section className="px-5 mb-20 md:mb-[6.25rem] xl:mb-[7.1825rem]">
-      <section className="xl:max-w-[1380px]">
-        <div className="mx-auto xl:max-w-[1220px] max-w-[610px] flex flex-col gap-12 xl:flex-row xl:gap-0">
+      <section className="mx-auto xl:max-w-[1380px]">
+        <div className="mx-auto xl:mx-0 xl:max-w-[1220px] max-w-[610px] flex flex-col gap-12 xl:flex-row xl:gap-0">
           <div className="xl:w-1/2">
             <Image width={1000} src={homepageBenefits} alt="" />
           </div>
-          <article className="md:mx-auto py-8 pr-6 border-y border-r border-academy-gold md:w-[610px] xl:w-1/2">
+          <article className="md:mx-auto py-8 pr-6 md:pr-0 border-y border-r border-academy-gold md:w-[610px] xl:w-1/2">
             <div className="mx-auto mb-4 md:text-center max-w-[440px]">
               <Text
                 size="overline"
