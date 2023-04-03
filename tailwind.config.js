@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        nunito: ['"Nunito Sans"', "sans-serif"],
-        montserrat: ['"Montserrat"', "sans-serif"],
+        nunito: ["--font-nunito-sans", "sans-serif"],
+        sans: ["--font-montserrat", "sans-serif"],
       },
       colors: {
         "mobile-menu": "#EAEAE6",

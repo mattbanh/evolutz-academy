@@ -1,6 +1,6 @@
 /* Bring in font from Google Fonts API including weight 200-900 */
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=optional");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=optional");
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap"); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +15,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-family: var(--font-montserrat), Helvetica, Arial, Lucida, sans-serif;
 }
 
 /* h1,
