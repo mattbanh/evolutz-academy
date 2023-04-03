@@ -27,7 +27,7 @@ export function Text({
     button: "font-medium uppercase text-sm",
     breadCrumb: "uppercase text-[0.8125rem]",
     label: "font-light uppercase text-sm",
-    footer: "font-light uppercase text-xs",
+    footer: "font-light text-xs",
   };
   // primary font defined in globals body selector
   const fontFamily = {
@@ -73,7 +73,7 @@ export function Heading({
     section: "font-semibold uppercase text-[1.9375rem] md:text-[3.125rem]",
     // Global
     sectionSub: "font-bold text-xl md:text-[1.6875rem] md:leading-[2.4375rem]",
-    footer: "font-medium uppercase text-sm",
+    footer: "font-semibold uppercase text-sm",
   };
   // primary font defined in globals body selector
   const fontFamily = {

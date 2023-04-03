@@ -5,6 +5,8 @@ import Mission from "@/components/Mission";
 import Founder from "@/components/Founder";
 import Differentiator from "@/components/Differentiator";
 import Benefits from "@/components/Benefits";
+import Testimonials from "@/components/Testimonials";
+import Collaborators from "@/components/Collaborators";
 
 export default function Home() {
   return (
@@ -24,6 +26,8 @@ export default function Home() {
       <Differentiator />
       <Founder />
       <Benefits />
+      <Testimonials />
+      <Collaborators />
     </>
   );
 }

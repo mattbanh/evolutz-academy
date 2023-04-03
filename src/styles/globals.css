@@ -1,6 +1,6 @@
 /* Bring in font from Google Fonts API including weight 200-900 */
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=optional");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=optional");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=optional");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
