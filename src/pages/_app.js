@@ -4,14 +4,13 @@ import { Montserrat, Nunito_Sans } from "next/font/google";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-montserrat",
 });
 
 const nunito_sans = Nunito_Sans({
   weight: ["400", "600", "700"],
   subsets: ["latin"],
-  variable: "--font-nunito-sans",
 });
+
 export default function App({ Component, pageProps }) {
   return (
     <>

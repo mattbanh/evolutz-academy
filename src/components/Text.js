@@ -69,7 +69,7 @@ export function Heading({
       "font-semibold uppercase text-xl md:text-[3.4375rem] md:leading-[4.1875rem]",
     // sectionLg: "",
     // Other pages
-    aboutPage: "font-semibold uppercase text-[2.5rem] md:text-[3.125rem]",
+    aboutPage: "font-semibold uppercase text-[2.25rem] md:text-[3.125rem]",
     section: "font-semibold uppercase text-[1.9375rem] md:text-[3.125rem]",
     // Global
     sectionSub: "font-bold text-xl md:text-[1.6875rem] md:leading-[2.4375rem]",
