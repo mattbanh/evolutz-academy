@@ -14,6 +14,9 @@ module.exports = {
         "evolutz-black": "#171717",
         "academy-green": "#3B5235",
       },
+      boxShadow: {
+        surround: "0 0 15px 3px rgb(0 0 0 / 0.125)",
+      },
       keyframes: {
         slidein: {
           "0%": { transform: "translatex(-100%)" },

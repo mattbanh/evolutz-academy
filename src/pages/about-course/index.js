@@ -1,6 +1,7 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
 import AboutHero from "@/components/AboutHero";
+import Offerings from "@/components/Offerings";
+import Included from "@/components/Included";
 
 export default function AboutCourse() {
   return (
@@ -15,6 +16,8 @@ export default function AboutCourse() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <AboutHero />
+      <Offerings />
+      <Included />
     </>
   );
 }

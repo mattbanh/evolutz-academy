@@ -15,8 +15,7 @@ export default function AboutHero() {
             >
               About
             </Text>
-
-            <Heading as="h3" size="aboutPage">
+            <Heading as="h1" size="aboutPage">
               About Course
             </Heading>
           </article>
