@@ -34,18 +34,16 @@ export default function Benefits() {
                     after:absolute after:bottom-0 after:left-0 after:w-1/2 after:border-b-[3px] after:border-academy-green"
             >
               <ul className="list-['—'] mb-8 ml-4">
-                {benefits.map((benefit, i) => {
-                  return (
-                    <li key={i} className="text-academy-gold pl-5 mb-4">
-                      <Text size="list" color="primary">
-                        {benefit}
-                      </Text>
-                    </li>
-                  );
-                })}
+                {benefits.map((benefit, i) => (
+                  <li key={i} className="text-academy-gold pl-5 mb-4">
+                    <Text size="list" color="primary">
+                      {benefit}
+                    </Text>
+                  </li>
+                ))}
               </ul>
               <a href="https://evolutzacademy.teachable.com/" target="_blank">
-                <button className="px-12 py-5 w-64 md:w-full bg-academy-blue">
+                <button className="px-12 py-5 w-64 bg-academy-blue">
                   <Text size="button" color="bright">
                     Start Learning
                   </Text>
