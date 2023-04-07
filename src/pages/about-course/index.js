@@ -2,6 +2,7 @@ import Head from "next/head";
 import AboutHero from "@/components/AboutHero";
 import Offerings from "@/components/Offerings";
 import Included from "@/components/Included";
+import Consultation from "@/components/Consultation";
 
 export default function AboutCourse() {
   return (
@@ -18,6 +19,7 @@ export default function AboutCourse() {
       <AboutHero />
       <Offerings />
       <Included />
+      <Consultation />
     </>
   );
 }
