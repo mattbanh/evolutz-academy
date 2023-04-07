@@ -86,10 +86,10 @@ export default function Footer() {
                 </Text>
               </a>
               <Link href="/about-course">
-                <button className="border border-white py-2 px-8">
-                  <Text size="button" color="bright">
+                <button className="border border-white py-2 px-6 md:px-8">
+                  <span className="uppercase text-white font-semibold text-xs">
                     Request a Call
-                  </Text>
+                  </span>
                 </button>
               </Link>
             </div>

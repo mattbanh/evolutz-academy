@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        nunito: ['"Nunito Sans"', "sans-serif"],
-        montserrat: ['"Montserrat"', "sans-serif"],
+        nunito: ["var(--font-nunito-sans)", "sans-serif"],
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
       },
       colors: {
         "mobile-menu": "#EAEAE6",
@@ -13,6 +13,9 @@ module.exports = {
         "academy-gold": "#C6A76E",
         "evolutz-black": "#171717",
         "academy-green": "#3B5235",
+      },
+      boxShadow: {
+        surround: "0 0 15px 3px rgb(0 0 0 / 0.125)",
       },
       keyframes: {
         slidein: {

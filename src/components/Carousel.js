@@ -65,11 +65,11 @@ export default function Carousel({ cardNumber, carouselContent }) {
               //       : "w-64 h-64 flex shrink-0 items-center justify-center drop-shadow-lg rounded-sm bg-white"
               //   }
             >
-              <img
+              {/* <img
                 className="w-32"
                 src={carouselContent[displayIndex]}
                 alt=""
-              />
+              /> */}
             </div>
           );
         })}
