@@ -1,14 +1,14 @@
 import Image from "next/image";
+import Input from "./Input";
 import { Text, Heading } from "./Text";
 import consultation from "/public/assets/images/about-consultation.jpg";
 
 export default function Consultation() {
-  const includedItems = [
-    "Short and concise courses that you can immediately apply to your current brand (can be completed at your own pace!)",
-    "Online materials (PDF)",
-    "Online agendas and calendars",
-    "Notebooks/Agendas (for purchase)",
-    "Course completion certificate (provided at the end of the course",
+  const formDetails = [
+    { name: "name", label: "Enter Your Name", type: "text" },
+    { name: "phone", label: "Enter Your Phone Number", type: "tel" },
+    { name: "email", label: "Enter Your Email", type: "email" },
+    { name: "inquiry", label: "How can we help you?", type: "text" },
   ];
 
   return (
@@ -18,49 +18,48 @@ export default function Consultation() {
           <Text
             size="overline"
             color="accent"
-            className="relative left-9 md:left-14"
+            className="relative left-60 md:left-[30rem]"
           >
-            Included
+            Consultation
           </Text>
           <Heading as="h2" size="section">
-            What&apos;s Included
+            Free Consultation
           </Heading>
         </article>
         <div className="mx-auto max-w-[560px] xl:max-w-[1120px] ">
-          <div className="md:max-w-[560px] mb-9">
+          <div className="mb-9">
             <Heading as="h3" size="sectionSub" className="mb-6">
-              As part of
-              <span className="text-academy-gold"> course registration </span>,
-              you will receive the following
+              Still thinking? Request a
+              <span className="text-academy-gold"> free consultation</span>
             </Heading>
           </div>
-          <section className="flex flex-col gap-10 xl:flex-row xl:gap-0">
-            <div
-              className="flex justify-end relative py-6 pl-6 xl:w-1/2 before:absolute before:left-0 before:top-0 before:h-full before:w-4/5 before:border-academy-green before:border-t-[3px] before:border-l-[3px]
-                after:absolute after:bottom-0 after:left-0 after:w-1/5 after:border-b-[3px] after:border-academy-green"
-            >
-              <Image src={consultation} alt="" className="object-contain" />
-            </div>
-            <article className="md:mx-auto p-12 xl:w-1/2 border border-academy-gold ">
-              <ul className="list-['—'] mb-12 ml-4 flex flex-col gap-6 md:gap-8">
-                {includedItems.map((item, i) => (
-                  <li key={i} className="text-academy-gold pl-5">
-                    <Text size="list" color="primary" family="secondary">
-                      {item}
-                    </Text>
-                  </li>
+          <section className="flex flex-col gap-10 xl:flex-row md:gap-0">
+            <article className="px-4 py-8 md:p-12 xl:w-1/2 border border-academy-gold">
+              <form className="flex flex-col">
+                {formDetails.map((formInput, i) => (
+                  <Input
+                    key={i}
+                    name={formInput.name}
+                    label={formInput.label}
+                    type={formInput.type}
+                  />
                 ))}
-              </ul>
-              <div className="flex justify-center">
-                <a href="https://evolutzacademy.teachable.com/" target="_blank">
-                  <button className="px-12 py-5 w-[270px] bg-academy-blue">
+                <div className="flex justify-center">
+                  <button type="submit" className="px-10 py-5 bg-academy-blue">
                     <Text size="button" color="bright">
-                      Buy Course
+                      Request Consultation
                     </Text>
                   </button>
-                </a>
-              </div>
+                </div>
+              </form>
             </article>
+            <div className="md:px-10 md:pt-10 xl:py-0 xl:pl-8 xl:pr-0">
+              <Image
+                src={consultation}
+                alt=""
+                className="mx-auto object-contain"
+              />
+            </div>
           </section>
         </div>
       </section>

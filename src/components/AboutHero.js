@@ -45,6 +45,7 @@ export default function AboutHero() {
         <section className="mx-auto lg:w-1/2 pl-5 md:px-8 lg:pl-16 lg:pr-0">
           <div className="relative">
             <Image
+              priority
               src={founder}
               alt="Suzanna Alsayed, the founder of Evolutz Academy"
             />

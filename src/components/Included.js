@@ -23,7 +23,7 @@ export default function Included() {
             Included
           </Text>
           <Heading as="h2" size="section">
-            What&apos;s Included
+            What’s Included
           </Heading>
         </article>
         <div className="mx-auto max-w-[560px] xl:max-w-[1120px] ">

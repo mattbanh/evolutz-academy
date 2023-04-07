@@ -85,7 +85,7 @@ export default function About() {
                   color="bright"
                   className="md:w-2/3"
                 >
-                  We&apos;ll provide knowledge that you can use in real life
+                  We’ll provide knowledge that you can use in real life
                 </Text>
               </div>
               <div className="absolute after:content-[''] after:border-b-[3px] after:border-l-[3px] after:border-academy-green after:absolute after:w-[25%] md:after:w-[130px] after:h-full after:top-0 after:-left-5">

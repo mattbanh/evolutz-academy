@@ -7,7 +7,7 @@ const montserrat = Montserrat({
 });
 
 const nunito_sans = Nunito_Sans({
-  weight: ["400", "600", "700"],
+  weight: ["300", "400", "600", "700"],
   subsets: ["latin"],
 });
 
