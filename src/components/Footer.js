@@ -32,7 +32,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="flex items-center">
-                  <Link href="/about-course">
+                  <Link href="/contact-us">
                     <Text size="footer" color="bright">
                       Contact Us
                     </Text>
@@ -85,7 +85,7 @@ export default function Footer() {
                   service@evolutz.com
                 </Text>
               </a>
-              <Link href="/about-course">
+              <Link href="/contact-us">
                 <button className="border border-white py-2 px-6 md:px-8">
                   <span className="uppercase text-white font-semibold text-xs">
                     Request a Call
@@ -111,14 +111,8 @@ export default function Footer() {
               >
                 <Image src={instagramIcon} alt="" />
               </a>
-              <a
-                href="https://www.linkedin.com/company/evolutz-academy/"
-                target="_blank"
-              >
-                <Image
-                  src={websiteIcon}
-                  alt="https://evolutzacademy.teachable.com/"
-                />
+              <a href="https://evolutzacademy.teachable.com/" target="_blank">
+                <Image src={websiteIcon} alt="" />
               </a>
             </div>
           </section>

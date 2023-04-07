@@ -36,14 +36,14 @@ export default function Layout({ children }) {
   });
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header handleClick={clickHandler} />
       <MobileHeader
         handleClick={closeMobileMenu}
         openMobileMenu={openMobileMenu}
       />
-      <main>{children}</main>
+      <main className=" flex-1">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }
