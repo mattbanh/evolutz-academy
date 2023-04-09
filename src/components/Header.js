@@ -26,7 +26,7 @@ export default function Header({ handleClick }) {
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href="/about-course" className="text-xs font-medium">
+              <Link href="/contact-us" className="text-xs font-medium">
                 CONTACT US
               </Link>
             </li>

@@ -73,6 +73,7 @@ export function Heading({
       "font-semibold uppercase text-[2.5rem] md:text-[3.125rem] leading-[3rem] md:leading-[3.8125rem]",
     section:
       "font-semibold uppercase text-[1.9375rem] md:text-[3.125rem] leading-[2.375rem]  md:leading-[4.1875rem]",
+    contactPage: "font-semibold text-[1.4375rem] md:text-[1.6875rem]",
     // Global
     sectionSub: "font-bold text-xl md:text-[1.6875rem] md:leading-[2.4375rem]",
     footer: "font-semibold uppercase text-sm",

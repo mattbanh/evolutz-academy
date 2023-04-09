@@ -2,7 +2,7 @@ export default function Input({ label, name, type }) {
   return (
     <>
       <label
-        className="mb-1 text-sm font-light font-nunito uppercase text-academy-blue "
+        className="mb-1 text-sm font-light font-nunito uppercase text-academy-blue"
         htmlFor={name}
       >
         {label}
