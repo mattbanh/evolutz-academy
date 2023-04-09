@@ -99,6 +99,18 @@ export default function AboutCourse() {
                   label={"Enter Your Email"}
                   type={"email"}
                 />
+                <label
+                  htmlFor="inquiry"
+                  className="mb-1 text-sm font-light font-nunito uppercase text-academy-blue"
+                >
+                  Reason for Inquiry
+                </label>
+                <textarea
+                  name="inquiry"
+                  rows="4"
+                  id="inquiry"
+                  className="mb-8 px-2 border-b-[1px] border-academy-blue text-evolutz-black focus:outline-none font-nunito resize-none"
+                ></textarea>
                 <button type="submit" className="px-2 py-5 bg-academy-blue">
                   <Text size="button" color="bright">
                     Contact Us for a Consultation
