@@ -8,8 +8,10 @@ const breadcrumbsExclude = [
   "/terms-of-service",
 ];
 
+const breadcrumbsInclude = ["/about-course", "/contact-us"];
+
 export default function Breadcrumbs({ path }) {
-  if (breadcrumbsExclude.includes(path)) {
+  if (!breadcrumbsInclude.includes(path)) {
     return <></>;
   }
 
