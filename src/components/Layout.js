@@ -47,7 +47,7 @@ export default function Layout({ children }) {
         openMobileMenu={openMobileMenu}
       />
       <Breadcrumbs path={router.pathname} />
-      <main className=" flex-1">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );

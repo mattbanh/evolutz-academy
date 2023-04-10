@@ -38,35 +38,14 @@ export default function Footer() {
                     </Text>
                   </Link>
                 </li>
-                <li className="flex items-center">
-                  <Link href="/about-course">
-                    <Text size="footer" color="bright">
-                      Refund Policy
-                    </Text>
-                  </Link>
-                </li>
               </ul>
             </nav>
             <nav className="flex flex-col gap-4 lg:hidden">
               <ul className="flex flex-col gap-1">
                 <li className="flex items-center">
-                  <Link href="/about-course">
+                  <Link href="/privacy policy">
                     <Text size="footer" color="bright">
                       Privacy Policy
-                    </Text>
-                  </Link>
-                </li>
-                <li className="flex items-center">
-                  <Link href="/about-course">
-                    <Text size="footer" color="bright">
-                      Terms and Conditions
-                    </Text>
-                  </Link>
-                </li>
-                <li className="flex items-center">
-                  <Link href="/about-course">
-                    <Text size="footer" color="bright">
-                      Terms of Service
                     </Text>
                   </Link>
                 </li>
@@ -123,23 +102,9 @@ export default function Footer() {
           </Heading>
           <ul className="flex flex-col gap-1">
             <li className="flex items-center">
-              <Link href="/about-course">
+              <Link href="/privacy-policy">
                 <Text size="footer" color="bright">
                   Privacy Policy
-                </Text>
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <Link href="/about-course">
-                <Text size="footer" color="bright">
-                  Terms and Conditions
-                </Text>
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <Link href="/about-course">
-                <Text size="footer" color="bright">
-                  Terms of Service
                 </Text>
               </Link>
             </li>
