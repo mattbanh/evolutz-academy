@@ -1,5 +1,7 @@
+import Image from "next/image";
 import ModuleCard from "./ModuleCard";
 import { Text, Heading } from "./Text";
+import background from "/public/assets/images/evolutz-background.png";
 
 export default function Offerings() {
   const modules = [
@@ -30,7 +32,7 @@ export default function Offerings() {
   ];
 
   return (
-    <section className="mb-36 lg:mb-28 px-5 md:px-8">
+    <section className="relative mb-36 lg:mb-28 px-5 md:px-8">
       <section className="mx-auto xl:max-w-[1280px]">
         <section className="mb-12 md:mb-8 lg:mb-0">
           <article className="mb-8">
@@ -75,6 +77,11 @@ export default function Offerings() {
           </section>
         </section>
       </section>
+      <Image
+        src={background}
+        alt=""
+        className="absolute -top-48 md:-top-96 lg:-top-80 right-0 md:-right-96 lg:right-28 -z-10"
+      />
     </section>
   );
 }

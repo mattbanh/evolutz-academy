@@ -1,12 +1,48 @@
-import { Text, Heading } from "@/components/Text";
-import Input from "@/components/Input";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { Text, Heading } from "@/components/Text";
+import Input from "@/components/Input";
 import linkedinIcon from "/public/assets/icons/linkedin-icon-blue.png";
 import instagramIcon from "/public/assets/icons/instagram-icon-blue.png";
 import websiteIcon from "/public/assets/icons/website-icon-blue.png";
+import { useState } from "react";
 
 export default function AboutCourse() {
+  const [successfulSubmit, setSuccessfulSubmit] = useState(false);
+  const router = useRouter();
+  const emailAPI = "http://localhost:3000/api/hello";
+  async function sendInquiry(data = {}) {
+    const response = await fetch(emailAPI, {
+      method: "POST",
+      cache: "no-cache",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    return { status: response.status, data: await response.json() };
+  }
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const { name, email, inquiry } = event.target;
+    const formData = {
+      name: name.value,
+      email: email.value,
+      inquiry: inquiry.value,
+    };
+    sendInquiry(formData)
+      .then((response) => {
+        if (response.status === 200) {
+          setSuccessfulSubmit(true);
+          // setTimeout(router.push("/"), 2000);
+        }
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <>
       <Head>
@@ -91,8 +127,8 @@ export default function AboutCourse() {
             >
               Request <span className="text-academy-gold">a consultation</span>
             </Heading>
-            <section className="relative max-w-[415px] pl-6 py-8 border-t-[3px] border-l-[3px] border-academy-gold after:absolute after:bottom-0 after:left-0 after:border-b-[3px] after:border-academy-gold after:w-1/3">
-              <form className="flex flex-col">
+            <section className="relative max-w-[415px] min-h-[452px] pl-6 py-8 border-t-[3px] border-l-[3px] border-academy-gold after:absolute after:bottom-0 after:left-0 after:border-b-[3px] after:border-academy-gold after:w-1/3">
+              <form className="flex flex-col" onSubmit={submitHandler}>
                 <Input name={"name"} label={"Enter Your Name"} type={"text"} />
                 <Input
                   name={"email"}
@@ -117,6 +153,11 @@ export default function AboutCourse() {
                   </Text>
                 </button>
               </form>
+              {successfulSubmit && (
+                <section className="absolute top-0 left-0 h-full w-full flex justify-center items-center bg-white/95">
+                  <Text as="p">Thank you! We have received your inquiry.</Text>
+                </section>
+              )}
             </section>
           </section>
         </div>

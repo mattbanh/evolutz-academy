@@ -8,9 +8,9 @@ export default function Header({ handleClick }) {
       <section className="flex justify-between max-w-[1180px] mx-auto">
         <Link href="/">
           <Image
-            width={70}
             src={evolutzAcademyLogo}
             alt="evolutz academy logo"
+            className="w-[4.375rem]"
           />
         </Link>
         <nav className="hidden min-[860px]:flex">

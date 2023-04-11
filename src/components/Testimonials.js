@@ -1,4 +1,6 @@
+import Image from "next/image";
 import { Text, Heading } from "./Text";
+import background from "/public/assets/images/evolutz-background.png";
 
 export default function Testimonials() {
   const testimonials = [
@@ -15,7 +17,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="px-5 mb-20 md:mb-[6.25rem] xl:mb-[7.1825rem]">
+    <section className="relative px-5 mb-20 md:mb-[6.25rem] xl:mb-[7.1825rem]">
       <section className="mx-auto xl:max-w-[1380px]">
         <article className="mb-12">
           <Text
@@ -54,6 +56,11 @@ export default function Testimonials() {
           })}
         </section>
       </section>
+      <Image
+        src={background}
+        alt=""
+        className="absolute -top-48 md:-top-80 lg:-top-[680px] right-0 -z-10"
+      />
     </section>
   );
 }

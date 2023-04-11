@@ -10,7 +10,7 @@ export default function Benefits() {
   ];
 
   return (
-    <section className="px-5 mb-20 md:mb-[6.25rem] xl:mb-[7.1825rem]">
+    <section className="relative px-5 mb-20 md:mb-[6.25rem] xl:mb-[7.1825rem]">
       <section className="mx-auto xl:max-w-[1380px]">
         <div className="mx-auto xl:mx-0 xl:max-w-[1220px] max-w-[610px] flex flex-col gap-12 xl:flex-row xl:gap-0">
           <div className="xl:w-1/2">
