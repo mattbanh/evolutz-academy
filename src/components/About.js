@@ -60,7 +60,7 @@ export default function About() {
                       href="/about-course"
                       className="flex justify-center md:justify-start"
                     >
-                      <button className="px-12 py-5 bg-academy-blue">
+                      <button className="px-12 py-5 bg-academy-blue hover:bg-academy-hover ease-in-out duration-150">
                         <Text size="button" color="bright">
                           Learn More
                         </Text>

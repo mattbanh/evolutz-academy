@@ -10,6 +10,7 @@ module.exports = {
       colors: {
         "mobile-menu": "#EAEAE6",
         "academy-blue": "#14224A",
+        "academy-hover": "#1C316A",
         "academy-gold": "#C6A76E",
         "evolutz-black": "#171717",
         "academy-green": "#3B5235",

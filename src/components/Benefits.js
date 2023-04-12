@@ -43,7 +43,7 @@ export default function Benefits() {
                 ))}
               </ul>
               <a href="https://evolutzacademy.teachable.com/" target="_blank">
-                <button className="px-12 py-5 w-full bg-academy-blue">
+                <button className="px-12 py-5 w-full bg-academy-blue hover:bg-academy-hover ease-in-out duration-150">
                   <Text size="button" color="bright">
                     Start Learning
                   </Text>

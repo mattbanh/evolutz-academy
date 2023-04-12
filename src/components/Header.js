@@ -16,29 +16,42 @@ export default function Header({ handleClick }) {
         <nav className="hidden min-[860px]:flex">
           <ul className="flex gap-8">
             <li className="flex items-center">
-              <Link href="/" className="text-xs font-medium">
+              <Link
+                href="/"
+                className="text-xs font-medium hover:text-academy-hover ease-in-out duration-150"
+              >
                 HOME
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href="/about-course" className="text-xs font-medium">
+              <Link
+                href="/about-course"
+                className="text-xs font-medium hover:text-academy-hover ease-in-out duration-150"
+              >
                 ABOUT COURSE
               </Link>
             </li>
             <li className="flex items-center">
-              <Link href="/contact-us" className="text-xs font-medium">
+              <Link
+                href="/contact-us"
+                className="text-xs font-medium hover:text-academy-hover ease-in-out duration-150"
+              >
                 CONTACT US
               </Link>
             </li>
           </ul>
         </nav>
         <div className="hidden min-[860px]:flex items-center gap-8">
-          <a href="mailto:service@evolutz.com" className="text-xs font-medium">
+          <a
+            href="mailto:service@evolutz.com"
+            className="text-xs font-medium hover:text-academy-hover ease-in-out duration-150"
+          >
             SERVICE@EVOLUTZ.COM
           </a>
           <a
             href="https://evolutzacademy.teachable.com/"
-            className="border-solid border-2 border-evolutz-black px-8 py-5 text-xs font-medium"
+            target="_blank"
+            className="border-solid border-2 border-evolutz-black hover:border-academy-hover px-8 py-5 text-xs font-medium hover:text-academy-hover ease-in-out duration-150"
           >
             START LEARNING
           </a>

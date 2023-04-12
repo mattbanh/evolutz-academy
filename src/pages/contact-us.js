@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -6,12 +7,11 @@ import Input from "@/components/Input";
 import linkedinIcon from "/public/assets/icons/linkedin-icon-blue.png";
 import instagramIcon from "/public/assets/icons/instagram-icon-blue.png";
 import websiteIcon from "/public/assets/icons/website-icon-blue.png";
-import { useState } from "react";
 
 export default function AboutCourse() {
   const [successfulSubmit, setSuccessfulSubmit] = useState(false);
   const router = useRouter();
-  const emailAPI = "http://localhost:3000/api/hello";
+  const emailAPI = "http://localhost:3000/api/contact-us";
   async function sendInquiry(data = {}) {
     const response = await fetch(emailAPI, {
       method: "POST",
@@ -37,7 +37,6 @@ export default function AboutCourse() {
       .then((response) => {
         if (response.status === 200) {
           setSuccessfulSubmit(true);
-          // setTimeout(router.push("/"), 2000);
         }
       })
       .catch((err) => console.log(err));
@@ -147,7 +146,10 @@ export default function AboutCourse() {
                   id="inquiry"
                   className="mb-8 px-2 border-b-[1px] border-academy-blue text-evolutz-black focus:outline-none font-nunito resize-none"
                 ></textarea>
-                <button type="submit" className="px-2 py-5 bg-academy-blue">
+                <button
+                  type="submit"
+                  className="px-2 py-5 bg-academy-blue hover:bg-academy-hover ease-in-out duration-150"
+                >
                   <Text size="button" color="bright">
                     Contact Us for a Consultation
                   </Text>
@@ -155,7 +157,9 @@ export default function AboutCourse() {
               </form>
               {successfulSubmit && (
                 <section className="absolute top-0 left-0 h-full w-full flex justify-center items-center bg-white/95">
-                  <Text as="p">Thank you! We have received your inquiry.</Text>
+                  <Text as="p" family="secondary" className="font-bold">
+                    We have received your inquiry. Thank you!
+                  </Text>
                 </section>
               )}
             </section>
