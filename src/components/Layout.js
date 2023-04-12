@@ -1,11 +1,15 @@
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Header from "./Header";
 import Footer from "./Footer";
 import MobileHeader from "./MobileHeader";
-import { useState, useEffect } from "react";
+import Breadcrumbs from "./Breadcrumbs";
 
 export default function Layout({ children }) {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
+  const router = useRouter();
+
   const clickHandler = () => {
     setOpenMobileMenu(true);
   };
@@ -36,14 +40,15 @@ export default function Layout({ children }) {
   });
 
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <Header handleClick={clickHandler} />
       <MobileHeader
         handleClick={closeMobileMenu}
         openMobileMenu={openMobileMenu}
       />
-      <main>{children}</main>
+      <Breadcrumbs path={router.pathname} />
+      <main className="flex-1">{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }

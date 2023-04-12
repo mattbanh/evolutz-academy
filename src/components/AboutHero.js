@@ -4,7 +4,7 @@ import founder from "/public/assets/images/about-hero.png";
 
 export default function AboutHero() {
   return (
-    <section className="mb-36 lg:mb-28  px-5 md:px-8">
+    <section className="mb-36 lg:mb-28 px-5 md:px-8">
       <section className="mx-auto xl:max-w-[1280px] flex flex-col lg:flex-row">
         <section className="lg:w-1/2 lg:pr-6 mb-12 md:mb-8 lg:mb-0">
           <article className="mb-8">
