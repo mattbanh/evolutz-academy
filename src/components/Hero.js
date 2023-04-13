@@ -2,7 +2,7 @@ import { Text, Heading } from "./Text";
 
 export default function Hero() {
   return (
-    <section className="relative -z-10">
+    <section className="relative">
       <section
         className="bg-no-repeat md:bg-cover bg-[position:35%_-45px] md:bg-[position:37%_0px] bg-[url('/assets/images/homepage-hero.png')] 
         min-h-[683px] md:min-h-[800px] flex items-center mt-[-83px]"
@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="w-full">
           <div
             className="relative max-w-[1084px] mx-auto  pl-6 pr-8 md:px-16 
-            before:content-[''] before:border-solid before:border-l-[3px] before:border-y-[3px] before:border-academy-green before:absolute before:w-32 before:h-full"
+            after:border-solid after:border-l-[3px] after:border-y-[3px] after:border-academy-green after:absolute after:top-0 after:w-32 after:h-full after:z-0"
           >
             <article className="pl-6 py-6 max-w-[432px]">
               <span className="uppercase text-[0.8125rem] mb-[0.875rem] inline-block mb-">
@@ -25,7 +25,11 @@ export default function Hero() {
                 understand that it is complex and requires strategy and
                 discipline to reach a particular destination.
               </p>
-              <a href="https://evolutzacademy.teachable.com/" target="_blank">
+              <a
+                href="https://evolutzacademy.teachable.com/"
+                target="_blank"
+                className="z-10"
+              >
                 <Text as="button" size="button">
                   Start Learning
                 </Text>

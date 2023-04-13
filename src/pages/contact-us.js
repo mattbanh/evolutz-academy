@@ -3,27 +3,19 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Text, Heading } from "@/components/Text";
+import { validateTeleChar, validateEmail, sendInquiry } from "@/lib/utils";
 import Input from "@/components/Input";
 import linkedinIcon from "/public/assets/icons/linkedin-icon-blue.png";
 import instagramIcon from "/public/assets/icons/instagram-icon-blue.png";
 import websiteIcon from "/public/assets/icons/website-icon-blue.png";
+const emailAPI = process.env.NEXT_PUBLIC_CONSULTATION_EMAIL_API;
 
 export default function AboutCourse() {
+  const [values, setValues] = useState({ name: "", email: "", inquiry: "" });
+  const [isError, setIsError] = useState(false);
+  const [isEmail, setIsEmail] = useState(true);
   const [successfulSubmit, setSuccessfulSubmit] = useState(false);
   const router = useRouter();
-  const emailAPI = "http://localhost:3000/api/contact-us";
-  async function sendInquiry(data = {}) {
-    const response = await fetch(emailAPI, {
-      method: "POST",
-      cache: "no-cache",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    return { status: response.status, data: await response.json() };
-  }
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -33,7 +25,7 @@ export default function AboutCourse() {
       email: email.value,
       inquiry: inquiry.value,
     };
-    sendInquiry(formData)
+    sendInquiry(formData, emailAPI)
       .then((response) => {
         if (response.status === 200) {
           setSuccessfulSubmit(true);

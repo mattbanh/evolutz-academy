@@ -1,7 +1,9 @@
 const sgMail = require("@sendgrid/mail");
 
 export default function handler(req, res) {
-  const { name, phone, email, inquiry } = req.body;
+  const { name, email, inquiry } = req.body;
+  const phone = req.body.phone ? req.body.phone : "Phone number not provided";
+
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to: "mattbanh92@gmail.com", // Change to your recipient

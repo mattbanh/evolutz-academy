@@ -1,10 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import evolutzAcademyLogo from "/public/assets/logo/evolutz-academy-logo.png";
+import NavLink from "./NavLink";
 
 export default function Header({ handleClick }) {
+  const { pathname } = useRouter();
+  const navMenu = [
+    { title: "Home", path: "/" },
+    { title: "About Course", path: "/about-course" },
+    { title: "Contact Us", path: "/contact-us" },
+  ];
+
   return (
-    <header className="bg-white/30 backdrop-blur-sm py-[0.25rem] px-5 min-[860px]:px-8">
+    <header className="bg-white/30 backdrop-blur-sm py-[0.25rem] px-5 min-[860px]:px-8 z-10">
       <section className="flex justify-between max-w-[1180px] mx-auto">
         <Link href="/">
           <Image
@@ -15,30 +24,14 @@ export default function Header({ handleClick }) {
         </Link>
         <nav className="hidden min-[860px]:flex">
           <ul className="flex gap-8">
-            <li className="flex items-center">
-              <Link
-                href="/"
-                className="text-xs font-medium hover:text-academy-hover ease-in-out duration-150"
-              >
-                HOME
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <Link
-                href="/about-course"
-                className="text-xs font-medium hover:text-academy-hover ease-in-out duration-150"
-              >
-                ABOUT COURSE
-              </Link>
-            </li>
-            <li className="flex items-center">
-              <Link
-                href="/contact-us"
-                className="text-xs font-medium hover:text-academy-hover ease-in-out duration-150"
-              >
-                CONTACT US
-              </Link>
-            </li>
+            {navMenu.map((navLink, i) => (
+              <NavLink
+                key={i}
+                title={navLink.title}
+                path={navLink.path}
+                pathname={pathname}
+              />
+            ))}
           </ul>
         </nav>
         <div className="hidden min-[860px]:flex items-center gap-8">

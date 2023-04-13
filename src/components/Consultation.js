@@ -1,50 +1,75 @@
 import { useState } from "react";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import Input from "./Input";
 import { Text, Heading } from "./Text";
+import { validateTeleChar, validateEmail, sendInquiry } from "@/lib/utils";
 import consultation from "/public/assets/images/about-consultation.jpg";
+const emailAPI = process.env.NEXT_PUBLIC_CONSULTATION_EMAIL_API;
+
+const formDetails = [
+  { name: "name", label: "Enter Your Name", type: "text" },
+  { name: "phone", label: "Enter Your Phone Number", type: "tel" },
+  { name: "email", label: "Enter Your Email", type: "email" },
+  { name: "inquiry", label: "How can we help you?", type: "text" },
+];
 
 export default function Consultation() {
+  const initialValues = {};
+  formDetails.forEach((detail) => (initialValues[detail.name] = ""));
+
+  const [values, setValues] = useState(initialValues);
+  const [isError, setIsError] = useState(false);
+  const [isEmail, setIsEmail] = useState(true);
   const [successfulSubmit, setSuccessfulSubmit] = useState(false);
-  const formDetails = [
-    { name: "name", label: "Enter Your Name", type: "text" },
-    { name: "phone", label: "Enter Your Phone Number", type: "tel" },
-    { name: "email", label: "Enter Your Email", type: "email" },
-    { name: "inquiry", label: "How can we help you?", type: "text" },
-  ];
 
-  const router = useRouter();
-  const emailAPI = "http://localhost:3000/api/consultation";
-  async function sendInquiry(data = {}) {
-    const response = await fetch(emailAPI, {
-      method: "POST",
-      cache: "no-cache",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+
+    if (
+      event.target.name === "phone" &&
+      event.target.value &&
+      !validateTeleChar(event.target.value)
+    ) {
+      return;
+    }
+
+    if (event.target.name === "email") {
+      setIsEmail(true);
+    }
+    setValues({
+      ...values,
+      [name]: value,
     });
+  };
 
-    return { status: response.status, data: await response.json() };
-  }
+  const formValidation = (values) => {
+    const { name, email, inquiry } = values;
+
+    if (!validateEmail(email)) {
+      setIsEmail(false);
+      return false;
+    }
+
+    if (!name || !email || !inquiry) {
+      return false;
+    }
+
+    return true;
+  };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    const { name, phone, email, inquiry } = event.target;
-    const formData = {
-      name: name.value,
-      phone: phone.value,
-      email: email.value,
-      inquiry: inquiry.value,
-    };
-    sendInquiry(formData)
-      .then((response) => {
-        if (response.status === 200) {
-          setSuccessfulSubmit(true);
-        }
-      })
-      .catch((err) => console.log(err));
+    if (formValidation(values)) {
+      sendInquiry(values, emailAPI)
+        .then((response) => {
+          if (response.status === 200) {
+            setSuccessfulSubmit(true);
+          }
+        })
+        .catch((err) => console.log(err));
+    } else {
+      setIsError(true);
+    }
   };
 
   return (
@@ -71,14 +96,35 @@ export default function Consultation() {
           </div>
           <section className="flex flex-col gap-10 xl:flex-row md:gap-0">
             <article className="relative px-4 py-8 md:p-12 xl:w-1/2 border border-academy-gold">
-              <form className="flex flex-col" onSubmit={submitHandler}>
+              <form
+                className="flex flex-col"
+                onSubmit={submitHandler}
+                noValidate
+              >
                 {formDetails.map((formInput, i) => (
-                  <Input
-                    key={i}
-                    name={formInput.name}
-                    label={formInput.label}
-                    type={formInput.type}
-                  />
+                  <div className="relative flex flex-col" key={i}>
+                    <Input
+                      name={formInput.name}
+                      label={formInput.label}
+                      type={formInput.type}
+                      onChange={handleInputChange}
+                      value={values[formInput.name]}
+                    />
+                    {formInput.name === "email" && (
+                      <span className="text-red-600 text-xs absolute bottom-3">
+                        {!isEmail &&
+                          "Please enter a valid email address (ex. name@example.com)"}
+                      </span>
+                    )}
+                    {(formInput.name === "name" ||
+                      formInput.name === "inquiry") && (
+                      <span className="text-red-600 text-xs absolute bottom-3">
+                        {isError &&
+                          !values[formInput.name] &&
+                          "This field is required"}
+                      </span>
+                    )}
+                  </div>
                 ))}
                 <div className="flex justify-center">
                   <button
