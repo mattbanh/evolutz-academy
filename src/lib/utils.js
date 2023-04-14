@@ -15,18 +15,3 @@ export async function sendInquiry(data = {}, API) {
 
   return { status: response.status, data: await response.json() };
 }
-
-const formValidation = (values) => {
-  const { name, email, inquiry } = values;
-
-  if (!validateEmail(email)) {
-    setIsEmail(false);
-    return false;
-  }
-
-  if (!name || !email || !inquiry) {
-    return false;
-  }
-
-  return true;
-};
