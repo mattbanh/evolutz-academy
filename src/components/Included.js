@@ -39,7 +39,12 @@ export default function Included() {
               className="flex justify-end relative py-6 pl-6 xl:w-1/2 before:absolute before:left-0 before:top-0 before:h-full before:w-4/5 before:border-academy-green before:border-t-[3px] before:border-l-[3px]
                 after:absolute after:bottom-0 after:left-0 after:w-1/5 after:border-b-[3px] after:border-academy-green"
             >
-              <Image src={included} alt="" className="object-contain" />
+              <Image
+                quality={100}
+                src={included}
+                alt=""
+                className="object-contain"
+              />
             </div>
             <article className="md:mx-auto p-12 xl:w-1/2 border border-academy-gold ">
               <ul className="list-['—'] mb-12 ml-4 flex flex-col gap-6 md:gap-8">

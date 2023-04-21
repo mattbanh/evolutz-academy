@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Text, Heading } from "./Text";
-import homepageFounder from "/public/assets/images/homepage-founder.png";
+import homepageFounder from "/public/assets/images/homepage-founder.webp";
 import CounterSection from "./CounterSection";
 
 export default function Founder() {
@@ -64,6 +64,7 @@ export default function Founder() {
             <section className="mx-auto lg:mx-0 lg:w-1/2 pl-10 pr-5 md:px-8 lg:pr-0">
               <div className="relative">
                 <Image
+                  quality={100}
                   src={homepageFounder}
                   alt="Suzanna Alsayed, the founder of Evolutz Academy"
                 />

@@ -27,7 +27,7 @@ export default function CounterSection() {
     };
   });
 
-  const time = 1750;
+  const time = 1500;
   const lecturesTotal = 50;
   const collaboratorsTotal = 10;
   const studentsTotal = 100;

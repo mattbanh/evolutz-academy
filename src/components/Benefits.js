@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Text, Heading } from "./Text";
-import homepageBenefits from "/public/assets/images/homepage-benefits.png";
+import homepageBenefits from "/public/assets/images/homepage-benefits.webp";
 
 export default function Benefits() {
   const benefits = [
@@ -14,7 +14,7 @@ export default function Benefits() {
       <section className="mx-auto xl:max-w-[1380px]">
         <div className="mx-auto xl:mx-0 xl:max-w-[1220px] max-w-[610px] flex flex-col gap-12 xl:flex-row xl:gap-0">
           <div className="xl:w-1/2">
-            <Image src={homepageBenefits} alt="" />
+            <Image quality={100} src={homepageBenefits} alt="" />
           </div>
           <article className="md:mx-auto py-8 pr-6 md:pr-0 border-y border-r border-academy-gold md:w-[610px] xl:w-1/2">
             <div className="mx-auto mb-4 md:text-center max-w-[440px]">

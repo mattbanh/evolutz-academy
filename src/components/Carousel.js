@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Carousel({ cardNumber, carouselContent }) {
-  //   const [slideRight, setSlideRight] = useState(false);
+  const [slideRight, setSlideRight] = useState(false);
   //   useEffect(() => {
   //     setSlideRight(false);
   //   });
@@ -32,7 +33,7 @@ export default function Carousel({ cardNumber, carouselContent }) {
   };
 
   const rightClickHandler = () => {
-    // setSlideRight(true);
+    setSlideRight(true);
     const newToDisplay = [...toDisplay];
 
     if (newToDisplay[displayNumber + 1] === totalCards - 1) {
@@ -41,12 +42,16 @@ export default function Carousel({ cardNumber, carouselContent }) {
       newToDisplay.push(newToDisplay[displayNumber + 1] + 1);
     }
     newToDisplay.shift();
-    // setTimeout(() => setToDisplay(newToDisplay), 50);
+
+    // setToDisplay(newToDisplay);
   };
 
   return (
     <section className="mx-auto max-w-[1300px] flex gap-8 items-center">
-      <span onClick={leftClickHandler} className="text-3xl inline-block">
+      <span
+        onClick={leftClickHandler}
+        className="text-3xl inline-block cursor-pointer"
+      >
         ‹
       </span>
       <div className="max-w-[1150px] h-72 flex gap-8 overflow-hidden items-center justify-center px-4">
@@ -55,9 +60,10 @@ export default function Carousel({ cardNumber, carouselContent }) {
             <div
               key={i}
               className={
-                carouselContent[displayIndex].includes("gsx")
-                  ? "w-64 h-64 flex shrink-0 items-center justify-center drop-shadow-lg rounded-sm bg-black/80"
-                  : "w-64 h-64 flex shrink-0 items-center justify-center drop-shadow-lg rounded-sm bg-white"
+                // ? "w-64 h-64 flex shrink-0 items-center justify-center drop-shadow-lg rounded-sm bg-black/80"
+                `w-64 h-64 flex shrink-0 items-center justify-center shadow-surround rounded-sm ${
+                  slideRight && "-translate-x-[110%]"
+                }`
               }
               //   className={
               //     slideRight
@@ -65,16 +71,19 @@ export default function Carousel({ cardNumber, carouselContent }) {
               //       : "w-64 h-64 flex shrink-0 items-center justify-center drop-shadow-lg rounded-sm bg-white"
               //   }
             >
-              {/* <img
+              <Image
                 className="w-32"
                 src={carouselContent[displayIndex]}
                 alt=""
-              /> */}
+              />
             </div>
           );
         })}
       </div>
-      <span onClick={rightClickHandler} className="text-3xl inline-block">
+      <span
+        onClick={rightClickHandler}
+        className="text-3xl inline-block cursor-pointer"
+      >
         ›
       </span>
     </section>

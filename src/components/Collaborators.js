@@ -1,15 +1,22 @@
 import Carousel from "./Carousel";
 import { Text, Heading } from "./Text";
+import gsxLogo from "/public/assets/partner-logos/gsx-logo.webp";
+import siberxLogo from "/public/assets/partner-logos/siberx-logo.png";
+import bondLogo from "/public/assets/partner-logos/bond-logo.png";
+import ifsecLogo from "/public/assets/partner-logos/ifsec-global-logo.png";
+import cyberTorontoLogo from "/public/assets/partner-logos/cyber-toronto-logo.jpg";
+import mediumLogo from "/public/assets/partner-logos/medium-logo.png";
+import investOttawaLogo from "/public/assets/partner-logos/invest-ottawa-logo.png";
 
 export default function Collaborators() {
   const carouselContent = [
-    "/assets/partner-logos/gsx-logo.webp",
-    "/assets/partner-logos/siberx-logo.png",
-    "/assets/partner-logos/bond-logo.png",
-    "/assets/partner-logos/ifsec-global-logo.png",
-    "/assets/partner-logos/cyber-toronto-logo.jpg",
-    "/assets/partner-logos/medium-logo.png",
-    "/assets/partner-logos/invest-ottawa-logo.png",
+    gsxLogo,
+    siberxLogo,
+    bondLogo,
+    ifsecLogo,
+    cyberTorontoLogo,
+    mediumLogo,
+    investOttawaLogo,
   ];
   return (
     <section className="px-5 mb-20 md:mb-[6.25rem] xl:mb-[7.1825rem]">

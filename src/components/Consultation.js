@@ -148,6 +148,7 @@ export default function Consultation() {
             <div className="md:px-10 md:pt-10 xl:py-0 xl:pl-8 xl:pr-0">
               <Image
                 priority
+                quality={100}
                 src={consultation}
                 alt=""
                 className="mx-auto object-contain"

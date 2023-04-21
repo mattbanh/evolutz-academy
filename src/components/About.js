@@ -73,7 +73,7 @@ export default function About() {
           </section>
           <section className="mx-auto lg:mx-0 lg:w-1/2 pl-10 pr-5 md:px-8 lg:pr-0">
             <div className="relative">
-              <Image src={homepageAbout} alt="" />
+              <Image quality={100} src={homepageAbout} alt="" />
               <div
                 className="relative w-full md:absolute bottom-0 left-0 md:max-w-[548px] min-h-[60px] md:min-h-[72px] p-[1.125rem] bg-academy-gold flex items-center
               after:content-[''] after:border-t-[3px] after:border-l-[3px] after:border-academy-green after:absolute after:w-[80%] md:after:w-[408px] after:h-[120%] after:top-[-3px] after:-left-5
