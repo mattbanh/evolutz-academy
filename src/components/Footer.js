@@ -13,9 +13,9 @@ export default function Footer() {
         <div className="w-full md:w-1/2 lg:w-[40%] flex">
           <Link href="/" className="w-2/3 md:w-[45%]">
             <Image
-              width={70}
               src={evolutzAcademyLogo}
               alt="evolutz academy logo"
+              className="w-[4.375rem]"
             />
           </Link>
           <div className="pb-4 md:pt-4 flex flex-col gap-1">

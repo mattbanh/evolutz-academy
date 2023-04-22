@@ -22,3 +22,58 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+.swiper {
+  height: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .swiper {
+    padding-left: 2.125rem !important;
+  }
+}
+
+.swiper-slide {
+  padding: 0.5rem;
+  background: #fff;
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
+}
+
+.swiper-pagination-bullet {
+  width: 2rem !important;
+  border-radius: 0px !important;
+  height: 2px !important;
+  background: #c6a76e !important;
+  opacity: 1 !important;
+  margin: 0 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #3b5235 !important;
+  height: 4px !important;
+}
+.swiper-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  top: 8.5rem !important;
+}
+.swiper-button-prev:after {
+  content: "‹" !important;
+}
+.swiper-button-next:after {
+  content: "›" !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  cursor: pointer;
+  font-family: var(--font-montserrat), Helvetica, Arial, Lucida, sans-serif !important;
+  font-weight: 200 !important;
+  font-size: 3rem !important;
+  color: #14224a !important;
+}

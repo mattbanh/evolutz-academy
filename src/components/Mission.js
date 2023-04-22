@@ -27,7 +27,7 @@ export default function Mission() {
           <section className="mx-auto lg:mx-0 lg:w-1/2 pr-10 pl-5 md:px-8 lg:pl-0">
             <div className="relative">
               <div className="flex justify-end">
-                <Image src={homepageMission} alt="" />
+                <Image quality={100} src={homepageMission} alt="" />
               </div>
               <div
                 className="relative md:absolute bottom-0 right-0 md:max-w-[548px] w-full min-h-[60px] md:min-h-[72px] p-[1.125rem] bg-academy-gold flex items-center
