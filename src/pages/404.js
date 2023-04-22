@@ -8,10 +8,10 @@ export default function Custom404() {
         bg-no-repeat bg-cover bg-[position:12%] lg:bg-[position:0px] bg-[url('/assets/images/homepage-differentiator.png')]"
     >
       <div className="mx-auto max-w-xl flex flex-col items-center justify-center gap-12 min-h-[60vh]">
-        <span class="text-academy-gold font-extrabold font-nunito text-[8rem] leading-[8rem] md:text-[12rem] Md:leading-[12rem]">
+        <span className="text-academy-gold font-extrabold font-nunito text-[8rem] leading-[8rem] md:text-[12rem] Md:leading-[12rem]">
           404
         </span>
-        <p class="text-academy-gold font-bold font-nunito text-3xl md:text-5xl md:leading-[4rem] uppercase text-center">
+        <p className="text-academy-gold font-bold font-nunito text-3xl md:text-5xl md:leading-[4rem] uppercase text-center">
           Sorry, this page does not exist
         </p>
         <Link href="/">

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Text, Heading } from "./Text";
-import founder from "/public/assets/images/about-hero.png";
+import founder from "/public/assets/images/about-hero.webp";
 
 export default function AboutHero() {
   return (
@@ -42,15 +42,16 @@ export default function AboutHero() {
             </article>
           </section>
         </section>
-        <section className="mx-auto lg:w-1/2 pl-5 md:px-8 lg:pl-16 lg:pr-0">
+        <section className="mx-auto lg:w-1/2 md:max-w-[578px] pl-5 md:px-8 lg:pl-16 lg:pr-0">
           <div className="relative">
             <Image
               priority
+              quality={100}
               src={founder}
               alt="Suzanna Alsayed, the founder of Evolutz Academy"
             />
             <div
-              className="relative w-full md:absolute bottom-0 left-0 md:max-w-[548px] min-h-[60px] md:min-h-[72px] p-[1.125rem] bg-academy-gold flex items-center
+              className="w-full absolute bottom-0 left-0 md:max-w-[576px] min-h-[60px] md:min-h-[72px] p-[1.125rem] bg-academy-gold flex items-center
               after:content-[''] after:border-t-[3px] after:border-l-[3px] after:border-academy-green after:absolute after:w-[80%] md:after:w-[408px] after:h-[120%] after:top-[-3px] after:-left-5
               "
             >
@@ -65,7 +66,12 @@ export default function AboutHero() {
             </div>
             <div className="max-w-[548px] absolute after:content-[''] after:border-b-[3px] after:border-l-[3px] after:border-academy-green after:absolute after:w-[25%] md:after:w-[130px] after:h-full after:top-0 after:-left-5">
               <div className="px-4 pt-4 pb-6 ">
-                <Text as="p" size="bodySub" family="secondary">
+                <Text
+                  as="p"
+                  size="bodySub"
+                  family="secondary"
+                  className="-indent-[0.375rem]"
+                >
                   “The only person you should compare yourself to is the person
                   you used to be in the past. Keep growing”
                 </Text>

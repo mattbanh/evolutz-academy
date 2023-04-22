@@ -1,18 +1,21 @@
 import Image from "next/image";
 import { Text } from "./Text";
+import growthIcon from "/public/assets/icons/differentiator-growth-icon.svg";
+import brandingIcon from "/public/assets/icons/differentiator-branding-icon.svg";
+import personIcon from "/public/assets/icons/differentiator-person-icon.svg";
 
 export default function Differentiator() {
   const differentiators = [
     {
-      icon: "/assets/icons/differentiator-growth-icon.svg",
+      icon: growthIcon,
       text: "Quarterly activities to facilitate additional growth, networking, and education.",
     },
     {
-      icon: "/assets/icons/differentiator-branding-icon.svg",
+      icon: brandingIcon,
       text: "Personal branding and photography packages to kickstart professional Linkedin presence.",
     },
     {
-      icon: "/assets/icons/differentiator-person-icon.svg",
+      icon: personIcon,
       text: "Personal one-on-one coaching packages available from our founder and other featured mentors.",
     },
   ];
@@ -36,12 +39,7 @@ export default function Differentiator() {
           {differentiators.map((differentiator, i) => (
             <li key={i} className="flex flex-1 gap-6">
               <div className="w-full max-w-[3.25rem] lg:pt-1 flex items-center lg:items-start">
-                <Image
-                  width={50}
-                  height={50}
-                  src={differentiator.icon}
-                  alt=""
-                />
+                <Image src={differentiator.icon} alt="" />
               </div>
               <Text as="p" family="secondary" size="list">
                 {differentiator.text}

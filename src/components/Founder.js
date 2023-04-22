@@ -1,30 +1,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Text, Heading } from "./Text";
-import homepageFounder from "/public/assets/images/homepage-founder.png";
+import homepageFounder from "/public/assets/images/homepage-founder.webp";
+import CounterSection from "./CounterSection";
 
 export default function Founder() {
-  const [lectures, setLectures] = useState(10);
-  const [collaborators, setCollaborators] = useState(0);
-  const [students, setStudents] = useState(10);
-
-  const time = 2000;
-  const lecturesTotal = 50;
-  const collaboratorsTotal = 10;
-  const studentsTotal = 100;
-
-  useEffect(() => {
-    lectures < lecturesTotal &&
-      setTimeout(() => setLectures(lectures + 1), time / lecturesTotal);
-    collaborators < collaboratorsTotal &&
-      setTimeout(
-        () => setCollaborators(collaborators + 1),
-        time / collaboratorsTotal
-      );
-    students < studentsTotal &&
-      setTimeout(() => setStudents(students + 1), (time - 100) / studentsTotal);
-  }, [lectures, students, collaborators]);
-
   return (
     <>
       <section className="mb-36 lg:mb-28">
@@ -84,6 +64,7 @@ export default function Founder() {
             <section className="mx-auto lg:mx-0 lg:w-1/2 pl-10 pr-5 md:px-8 lg:pr-0">
               <div className="relative">
                 <Image
+                  quality={100}
                   src={homepageFounder}
                   alt="Suzanna Alsayed, the founder of Evolutz Academy"
                 />
@@ -114,50 +95,7 @@ export default function Founder() {
           </section>
         </section>
       </section>
-      <section className="mx-auto mb-24 px-8 max-w-[320px] min-[820px]:max-w-full">
-        <ul className="mx-auto max-w-[988px] flex flex-col gap-6 min-[820px]:flex-row md:justify-between font-nunito font-bold">
-          <li className="flex items-center">
-            <span className="text-[3.4375rem] text-academy-gold">
-              {lectures}
-            </span>
-            <span
-              className={
-                lectures === lecturesTotal
-                  ? "relative -top-9 -left-1 text-[2.5rem] text-academy-gold animate-slideup"
-                  : "text-[2.5rem] invisible"
-              }
-            >
-              +
-            </span>
-            <span className=" text-[1.375rem] text-academy-blue">
-              Lectures Done
-            </span>
-          </li>
-          <li className="flex gap-6 min-w-[230px] items-center">
-            <span className="text-[3.4375rem] text-academy-gold">
-              {collaborators}
-            </span>
-            <span className=" text-[1.375rem] text-academy-blue">
-              Collaborators
-            </span>
-          </li>
-          <li className="flex items-center">
-            <span className="text-[3.4375rem] text-academy-gold">
-              {students}
-            </span>
-            <span
-              className={
-                lectures === lecturesTotal
-                  ? "relative -top-9 -left-1 text-[2.5rem] text-academy-gold animate-slideup"
-                  : "text-[2.5rem] invisible"
-              }
-            >
-              +
-            </span>
-            <span className=" text-[1.375rem] text-academy-blue">Students</span>
-          </li>
-        </ul>
-      </section>
+      <CounterSection />
     </>
   );
 }

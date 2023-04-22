@@ -1,82 +1,81 @@
-import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+import Image from "next/image";
 
-export default function Carousel({ cardNumber, carouselContent }) {
-  //   const [slideRight, setSlideRight] = useState(false);
-  //   useEffect(() => {
-  //     setSlideRight(false);
-  //   });
-  let displayNumber = cardNumber;
-  if (carouselContent.length < cardNumber) {
-    displayNumber = carouselContent.length;
-  }
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-  const initialToDisplay = [carouselContent.length - 1];
+import gsxLogo from "/public/assets/partner-logos/gsx-logo.png";
+import siberxLogo from "/public/assets/partner-logos/siberx-logo.png";
+import bondLogo from "/public/assets/partner-logos/bond-logo.png";
+import ifsecLogo from "/public/assets/partner-logos/ifsec-global-logo.png";
+import cyberTorontoLogo from "/public/assets/partner-logos/cyber-toronto-logo.jpg";
+import mediumLogo from "/public/assets/partner-logos/medium-logo.png";
+import investOttawaLogo from "/public/assets/partner-logos/invest-ottawa-logo.png";
 
-  for (let i = 0; i <= displayNumber; i++) {
-    initialToDisplay.push(i);
-  }
-
-  const [toDisplay, setToDisplay] = useState(initialToDisplay);
-
-  const totalCards = carouselContent.length;
-
-  const leftClickHandler = () => {
-    const newToDisplay = [...toDisplay];
-    newToDisplay.pop();
-    if (newToDisplay[0] === 0) {
-      newToDisplay.unshift(totalCards - 1);
-    } else {
-      newToDisplay.unshift(newToDisplay[0] - 1);
-    }
-    setToDisplay(newToDisplay);
-  };
-
-  const rightClickHandler = () => {
-    // setSlideRight(true);
-    const newToDisplay = [...toDisplay];
-
-    if (newToDisplay[displayNumber + 1] === totalCards - 1) {
-      newToDisplay.push(0);
-    } else {
-      newToDisplay.push(newToDisplay[displayNumber + 1] + 1);
-    }
-    newToDisplay.shift();
-    // setTimeout(() => setToDisplay(newToDisplay), 50);
-  };
-
+export default function Carousel() {
   return (
-    <section className="mx-auto max-w-[1300px] flex gap-8 items-center">
-      <span onClick={leftClickHandler} className="text-3xl inline-block">
-        ‹
-      </span>
-      <div className="max-w-[1150px] h-72 flex gap-8 overflow-hidden items-center justify-center px-4">
-        {toDisplay.map((displayIndex, i) => {
-          return (
-            <div
-              key={i}
-              className={
-                carouselContent[displayIndex].includes("gsx")
-                  ? "w-64 h-64 flex shrink-0 items-center justify-center drop-shadow-lg rounded-sm bg-black/80"
-                  : "w-64 h-64 flex shrink-0 items-center justify-center drop-shadow-lg rounded-sm bg-white"
-              }
-              //   className={
-              //     slideRight
-              //       ? "w-64 h-64 flex shrink-0 items-center justify-center drop-shadow-lg rounded-sm bg-white transition ease-in duration-200"
-              //       : "w-64 h-64 flex shrink-0 items-center justify-center drop-shadow-lg rounded-sm bg-white"
-              //   }
-            >
-              {/* <img
-                className="w-32"
-                src={carouselContent[displayIndex]}
-                alt=""
-              /> */}
-            </div>
-          );
-        })}
-      </div>
-      <span onClick={rightClickHandler} className="text-3xl inline-block">
-        ›
-      </span>
+    <section className="mx-auto h-80 px-5 md:px-14 w-[320px] md:w-full">
+      <Swiper
+        slidesPerView={1}
+        loop={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        breakpoints={{
+          768: {
+            width: 924,
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+
+          1280: {
+            width: 924,
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        }}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <div className="h-[264px] flex justify-center items-center shadow-surround">
+            <Image className="w-32" src={gsxLogo} alt="" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="h-[264px] flex justify-center items-center shadow-surround">
+            <Image className="w-32" src={siberxLogo} alt="" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="h-[264px] flex justify-center items-center shadow-surround">
+            <Image className="w-32" src={bondLogo} alt="" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="h-[264px] flex justify-center items-center shadow-surround">
+            <Image className="w-32" src={ifsecLogo} alt="" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="h-[264px] flex justify-center items-center shadow-surround">
+            <Image className="w-32" src={cyberTorontoLogo} alt="" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="h-[264px] flex justify-center items-center shadow-surround">
+            <Image className="w-32" src={mediumLogo} alt="" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="h-[264px] flex justify-center items-center shadow-surround">
+            <Image className="w-32" src={investOttawaLogo} alt="" />
+          </div>
+        </SwiperSlide>
+      </Swiper>
     </section>
   );
 }

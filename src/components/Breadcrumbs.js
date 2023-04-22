@@ -27,7 +27,7 @@ export default function Breadcrumbs({ path }) {
         <span className="uppercase text-[0.8125rem] text-academy-blue/70">
           <Link
             href="/"
-            className="border-b-[1px] border-academy-blue text-academy-blue"
+            className="border-b-[1px] border-academy-blue text-academy-blue hover:text-academy-hover ease-in-out duration-150"
           >
             Home
           </Link>{" "}

@@ -19,7 +19,7 @@ export default function Header({ handleClick, openMobileMenu }) {
         }
       >
         <div>
-          <Link href="/" className="inline-block">
+          <Link href="/" className="inline-block" onClick={handleClick}>
             <Image
               width={70}
               src={evolutzAcademyLogo}
@@ -30,17 +30,29 @@ export default function Header({ handleClick, openMobileMenu }) {
         <nav className="flex px-2">
           <ul className="flex flex-col gap-8">
             <li>
-              <Link href="/" className="text-xs font-medium">
+              <Link
+                href="/"
+                className="text-xs font-medium"
+                onClick={handleClick}
+              >
                 HOME
               </Link>
             </li>
             <li>
-              <Link href="/about-course" className="text-xs font-medium">
+              <Link
+                href="/about-course"
+                className="text-xs font-medium"
+                onClick={handleClick}
+              >
                 ABOUT COURSE
               </Link>
             </li>
             <li>
-              <Link href="/about-course" className="text-xs font-medium">
+              <Link
+                href="/contact-us"
+                className="text-xs font-medium"
+                onClick={handleClick}
+              >
                 CONTACT US
               </Link>
             </li>
@@ -49,6 +61,7 @@ export default function Header({ handleClick, openMobileMenu }) {
         <div className="flex items-center gap-8">
           <a
             href="https://evolutzacademy.teachable.com/"
+            target="_blank"
             className="border-solid border-2 border-evolutz-black px-6 py-5 text-xs font-medium"
           >
             START LEARNING
