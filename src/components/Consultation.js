@@ -79,7 +79,7 @@ export default function Consultation() {
           <Text
             size="overline"
             color="accent"
-            className="relative left-60 md:left-[30rem]"
+            className="relative left-56 md:left-[30rem]"
           >
             Consultation
           </Text>

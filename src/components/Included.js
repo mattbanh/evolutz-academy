@@ -30,7 +30,7 @@ export default function Included() {
           <div className="md:max-w-[560px] mb-9">
             <Heading as="h3" size="sectionSub" className="mb-6">
               As part of
-              <span className="text-academy-gold"> course registration </span>,
+              <span className="text-academy-gold"> course registration</span>,
               you will receive the following
             </Heading>
           </div>
@@ -46,7 +46,7 @@ export default function Included() {
                 className="object-contain"
               />
             </div>
-            <article className="md:mx-auto p-12 xl:w-1/2 border border-academy-gold ">
+            <article className="md:mx-auto px-4 py-12 md:px-12 xl:w-1/2 border border-academy-gold ">
               <ul className="list-['—'] mb-12 ml-4 flex flex-col gap-6 md:gap-8">
                 {includedItems.map((item, i) => (
                   <li key={i} className="text-academy-gold pl-5">
