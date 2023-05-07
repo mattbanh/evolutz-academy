@@ -16,15 +16,15 @@ export default function handler(req, res) {
     .send(msg)
     .then(() => {
       console.log("Email sent");
+      res.status(200).json({
+        name,
+        phone,
+        email,
+        inquiry,
+      });
     })
     .catch((error) => {
       console.error(error);
+      res.status(400).send(error);
     });
-
-  res.status(200).json({
-    name,
-    phone,
-    email,
-    inquiry,
-  });
 }
