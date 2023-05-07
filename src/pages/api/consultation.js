@@ -7,7 +7,7 @@ export default function handler(req, res) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
     to: "service@evolutz.com", // Change to your recipient
-    from: "service@evolutz.com", // Change to your verified sender
+    from: "no-reply@evolutzacademy.com", // Change to your verified sender
     subject: `Consultation Request from ${name} ${email} ${phone}`,
     text: inquiry,
     html: `<p>${inquiry}</p>`,
